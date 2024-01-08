@@ -1,0 +1,51 @@
+npm init -y
+package json
+
+npm install express
+
+npm install nodemon (if not installed globally for instant server updates)
+
+npm install dotenv
+
+set up scripts in package.json for running server with nodemon
+
+initialize express app
+require dotenv.config
+
+setup port # in .env file
+
+Listen to port # app.listen(process.env.PORT, () => {
+  //do something here
+}
+
+then you can setup router
+
+in expressRouter.js
+
+require express
+const router = express.Router()
+
+then you can setup different HTTP requests 
+
+end of file module.exports = router
+
+Go back to server file and require router const expressRoutes = require("./routes/expressRouter")
+
+Implement router with app.use("/api/expressRouter", expressRoutes)
+
+Add express json middleware to enable json handling
+
+Then go to MongoDB, setup authenticated user with M0 cluster, and npm install mogodb on command line
+
+Then add connection string to .env file
+
+Install mongoose package with terminal
+
+require mongoose to connect to mongodb
+
+NEXT SCHEMA + MODEL
+
+create model file and create new Schema with correct fields. Then export it as 
+mongoose.model
+
+Next abstract database logic to controller file
